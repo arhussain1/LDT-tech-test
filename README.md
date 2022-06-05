@@ -12,11 +12,13 @@ You have been asked to build a dashboard that makes it easy for for organisers t
 2. It must also be possible for each organiser to see how much they have made in ticket sales.
 
 #### Technologies 
-I aim to use React JS to create a Front End application, I aim to make the dashboard on a single page.
+I aim to use React JS to create a Front End application, I aim to make the dashboard on a single page. I also created a server using node and express JS.
 
 - React JS
 - HTML
 - CSS
+- Node JS
+- Express JS
 
 ### How to install this software?
 Step 1:
