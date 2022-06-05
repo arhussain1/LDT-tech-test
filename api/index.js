@@ -12,7 +12,7 @@ app.get("/data", (req, res) => {
   .then(data => {res.json(data)})
 })
 
-const port = 8001
+const port = 8000
 
 app.listen(port, () => {
   console.log(`server is listening on port ${port}`)
