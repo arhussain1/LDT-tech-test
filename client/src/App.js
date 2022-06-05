@@ -18,11 +18,13 @@ function App() {
     fetchBookings();
   }, []);
 
-  console.log(entries)
-
   return (
     <div className="App">
-      Lettuce do this
+      {
+        entries.map(booking => {
+          return <p>{booking.firstName}</p>
+        })
+      }
     </div>
   );
 }
