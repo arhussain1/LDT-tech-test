@@ -1,0 +1,10 @@
+.topbar {
+  height: 50px;
+  background-color: rgb(213, 225, 236);
+}
+
+.logo {
+  color: dodgerblue;
+  font-weight: bold;
+  font-size: 30px;
+}
