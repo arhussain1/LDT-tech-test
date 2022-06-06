@@ -1,9 +1,17 @@
 import "./sidebar.css"
 
-const Sidebar = () => {
+const Sidebar = ({entries, setEntries}) => {
+
+  const filterFunction = () => {
+    console.log("I'm only showing Great Run events")
+  }
+
   return (
     <div className="sidebar">
-      Sidebar
+      <div className="filterElements">
+        Sidebar
+        <button onClick={() => {filterFunction()}}>Great Run</button>
+      </div>
     </div>
   )
 }

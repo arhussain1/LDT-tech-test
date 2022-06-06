@@ -2,3 +2,8 @@
   flex: 1;
   background-color: rgb(194, 208, 218);
 }
+
+.filterElements {
+  display: flex;
+  flex-direction: column;
+}

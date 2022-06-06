@@ -35,8 +35,8 @@ function App() {
       </div>
 
       {
-        entries.map(booking => {
-          return <p>{booking.firstName}</p>
+        entries.map((booking, index) => {
+          return <p key={index}>{booking.firstName}</p>
         })
       }
     </div>
