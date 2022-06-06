@@ -6,11 +6,11 @@ const Table = ({entries}) => {
       <table>
         <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Status</th>
-            <th>Event</th>
-            <th>Organiser</th>
+            <th className="nameColumns">First Name</th>
+            <th className="nameColumns">Last Name</th>
+            <th className="statusColumn">Status</th>
+            <th className="eventColumn">Event</th>
+            <th className="organiserColumn">Organiser</th>
           </tr>
         </thead>
         <tbody>
