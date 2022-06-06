@@ -3,6 +3,26 @@
   width: 100%;
 }
 
-.table {
-  flex: 4;
+.nameColumns{
+  width: 150px;
+}
+
+.statusColumn {
+  width: 150px;
+}
+
+.eventColumn {
+  width: 600px;
+}
+
+.organiserColumn {
+  width: 200px;
+}
+
+th {
+  height: 40px;
+}
+
+td {
+  height: 23px;
 }
