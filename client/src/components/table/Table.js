@@ -1,6 +1,6 @@
 import "./table.css"
 
-const Table = () => {
+const Table = ({entries}) => {
   return (
     <div className="table">
       <table>
@@ -13,6 +13,21 @@ const Table = () => {
             <th>Organiser</th>
           </tr>
         </thead>
+        <tbody>
+          {
+            entries.map((val, key) => {
+              return(
+                <tr key={key}>
+                  <td>{val.firstName}</td>
+                  <td>{val.lastName}</td>
+                  <td>{val.status}</td>
+                  <td>{val.eventTitle}</td>
+                  <td>{val.organiserTitle}</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
       </table>
     </div>
   )

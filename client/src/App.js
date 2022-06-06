@@ -30,7 +30,7 @@ function App() {
             entries={entries}
             setEntries={setEntries}
         />
-        <Table/>
+        <Table entries={entries}/>
       </div>
     </div>
   );
