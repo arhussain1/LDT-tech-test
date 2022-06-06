@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import "./app.css"
 import Topbar from './components/topbar/Topbar';
 import Sidebar from "./components/sidebar/Sidebar";
+import Table from './components/table/Table';
 
 
 function App() {
@@ -29,9 +30,7 @@ function App() {
             entries={entries}
             setEntries={setEntries}
         />
-        <div className="table">
-          Table placeholder
-        </div>
+        <Table/>
       </div>
     </div>
   );
