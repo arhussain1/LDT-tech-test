@@ -25,18 +25,25 @@ const Sidebar = ({entries, setEntries}) => {
     console.log("I'm only showing Great Run events")
   }
 
+  const testFetch = (query) => {
+    fetch(`http://localhost:8000/filter?q=${query}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
+
   return (
     <div className="sidebar">
       <div className="filterElements">
         Sidebar
         <div className="filterButton">
           {
-            organiserList.map(organiser => {
+            organiserList.map((organiser, index) => {
               return (
-                <button onClick={() => {filterFunction()}}>{organiser}</button>
+                <button key={index} onClick={() => {filterFunction()}}>{organiser}</button>
               )
             })
           }
+          <button onClick={() => {testFetch("Great Run")}}>test fetch</button>
         </div>
       </div>
     </div>
