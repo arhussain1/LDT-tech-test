@@ -7,6 +7,8 @@ import Table from './components/table/Table';
 
 function App() {
   const [entries, setEntries] = useState([])
+  const [filteredEntries, setFilteredEntries] = useState([])
+
 
   useEffect(() => {
     const addBookings = (data) => {
@@ -27,10 +29,11 @@ function App() {
       <Topbar/>
       <div className="container">
         <Sidebar 
-            entries={entries}
-            setEntries={setEntries}
+          entries={entries}
+          setEntries={setEntries}
+          setFilteredEntries={setFilteredEntries}
         />
-        <Table entries={entries}/>
+        <Table filteredEntries={filteredEntries}/>
       </div>
     </div>
   );

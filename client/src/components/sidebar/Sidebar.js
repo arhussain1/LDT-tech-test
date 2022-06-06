@@ -2,7 +2,7 @@ import "./sidebar.css"
 import { useState, useEffect } from 'react'
 
 
-const Sidebar = ({entries, setEntries}) => {
+const Sidebar = ({entries, setEntries, setFilteredEntries}) => {
 
   // lets find out the names of our organisers from the entries data
   const [organiserList, setOrganiserList] = useState([])
@@ -24,7 +24,7 @@ const Sidebar = ({entries, setEntries}) => {
   const filterFunction = async(query) => {
     await fetch(`http://localhost:8000/filter?q=${query.organiser}`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => setFilteredEntries(data))
   }
 
 

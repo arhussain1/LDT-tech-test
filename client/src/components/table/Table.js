@@ -1,6 +1,6 @@
 import "./table.css"
 
-const Table = ({entries}) => {
+const Table = ({filteredEntries}) => {
   return (
     <div className="table">
       <table>
@@ -15,7 +15,7 @@ const Table = ({entries}) => {
         </thead>
         <tbody>
           {
-            entries.map((val, key) => {
+            filteredEntries.map((val, key) => {
               return(
                 <tr key={key}>
                   <td>{val.firstName}</td>
