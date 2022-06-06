@@ -33,12 +33,6 @@ function App() {
           Table placeholder
         </div>
       </div>
-
-      {
-        entries.map((booking, index) => {
-          return <p key={index}>{booking.firstName}</p>
-        })
-      }
     </div>
   );
 }
