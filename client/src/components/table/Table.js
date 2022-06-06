@@ -1,6 +1,16 @@
 import "./table.css"
 
-const Table = ({entries}) => {
+const Table = ({ entries, filteredEntries}) => {
+
+  let chosenData 
+
+  if (filteredEntries.length === 0) {
+    chosenData = entries
+  }
+  else {
+    chosenData = filteredEntries
+  }
+
   return (
     <div className="table">
       <table>
@@ -15,7 +25,7 @@ const Table = ({entries}) => {
         </thead>
         <tbody>
           {
-            entries.map((val, key) => {
+            chosenData.map((val, key) => {
               return(
                 <tr key={key}>
                   <td>{val.firstName}</td>
