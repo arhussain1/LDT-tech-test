@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import "./app.css"
 import Topbar from './components/topbar/Topbar';
+import Sidebar from "./components/sidebar/Sidebar";
 
 
 function App() {
@@ -22,6 +24,16 @@ function App() {
   return (
     <div>
       <Topbar/>
+      <div className="container">
+        <Sidebar 
+            entries={entries}
+            setEntries={setEntries}
+        />
+        <div className="table">
+          Table placeholder
+        </div>
+      </div>
+
       {
         entries.map(booking => {
           return <p>{booking.firstName}</p>
