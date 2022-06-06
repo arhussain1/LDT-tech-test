@@ -1,0 +1,16 @@
+.sidebar {
+  flex: 1;
+  background-color: rgb(194, 208, 218);
+  height: fit-content;
+}
+
+.filterElements {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterButton {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+}

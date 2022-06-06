@@ -9,7 +9,18 @@ app.use(express.json());
 app.get("/data", (req, res) => {
   fetch("https://ldt-tech-test.herokuapp.com/api/startlistentries")
   .then(response => response.json())
-  .then(data => {res.json(data)})
+  .then(data => res.json(data))
+})
+
+app.get("/filter", (req, res) => {
+  const q = req.query.q
+
+  fetch("https://ldt-tech-test.herokuapp.com/api/startlistentries")
+  .then(response => response.json())
+  .then(data => {
+    const filteredData = data.filter(booking => booking.organiserTitle === q)
+    res.json(filteredData)
+  })  
 })
 
 const port = 8000
