@@ -15,13 +15,10 @@ app.get("/data", (req, res) => {
 app.get("/filter", (req, res) => {
   const q = req.query.q
 
-  console.log(q)
-
   fetch("https://ldt-tech-test.herokuapp.com/api/startlistentries")
   .then(response => response.json())
   .then(data => {
     const filteredData = data.filter(booking => booking.organiserTitle === q)
-    filteredData.forEach(booking => console.log(booking.organiserTitle))
     res.json(filteredData)
   })  
 })

@@ -21,15 +21,12 @@ const Sidebar = ({entries, setEntries}) => {
     identifyOrganisers();
   }, [entries]);
 
-  const filterFunction = () => {
-    console.log("I'm only showing Great Run events")
-  }
-
-  const testFetch = (query) => {
-    fetch(`http://localhost:8000/filter?q=${query}`)
+  const filterFunction = async(query) => {
+    await fetch(`http://localhost:8000/filter?q=${query.organiser}`)
     .then(response => response.json())
     .then(data => console.log(data))
   }
+
 
   return (
     <div className="sidebar">
@@ -39,11 +36,10 @@ const Sidebar = ({entries, setEntries}) => {
           {
             organiserList.map((organiser, index) => {
               return (
-                <button key={index} onClick={() => {filterFunction()}}>{organiser}</button>
+                <button key={index} onClick={() => {filterFunction({organiser})}}>{organiser}</button>
               )
             })
           }
-          <button onClick={() => {testFetch("Great Run")}}>test fetch</button>
         </div>
       </div>
     </div>
