@@ -3,12 +3,12 @@ import "./app.css"
 import Topbar from './components/topbar/Topbar';
 import Sidebar from "./components/sidebar/Sidebar";
 import Table from './components/table/Table';
+import Revenue from './components/revenue/Revenue';
 
 
 function App() {
   const [entries, setEntries] = useState([])
   const [filteredEntries, setFilteredEntries] = useState([])
-
 
   useEffect(() => {
     const addBookings = (data) => {
@@ -37,6 +37,7 @@ function App() {
           entries={entries}
           filteredEntries={filteredEntries}
         />
+        <Revenue filteredEntries={filteredEntries}/>
       </div>
     </div>
   );
