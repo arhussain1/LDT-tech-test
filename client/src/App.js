@@ -33,7 +33,10 @@ function App() {
           setEntries={setEntries}
           setFilteredEntries={setFilteredEntries}
         />
-        <Table filteredEntries={filteredEntries}/>
+        <Table 
+          entries={entries}
+          filteredEntries={filteredEntries}
+        />
       </div>
     </div>
   );

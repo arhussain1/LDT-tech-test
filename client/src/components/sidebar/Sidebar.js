@@ -27,6 +27,9 @@ const Sidebar = ({entries, setEntries, setFilteredEntries}) => {
     .then(data => setFilteredEntries(data))
   }
 
+  const resetFilters = () => {
+    setFilteredEntries([])
+  }
 
   return (
     <div className="sidebar">
@@ -40,6 +43,7 @@ const Sidebar = ({entries, setEntries, setFilteredEntries}) => {
               )
             })
           }
+          <button onClick={resetFilters}>Reset Filters</button>
         </div>
       </div>
     </div>
